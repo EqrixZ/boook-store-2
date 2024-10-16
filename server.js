@@ -13,7 +13,7 @@ const sequelize = new Sequelize('postgres', 'webadmin', 'HMTppc33296', {
 });
 
 app.use(cors({
-  origin: 'https://boook-store-2.pages.dev/', // Allow requests from your frontend
+  origin: 'https://boook-store-2.pages.dev', // Allow requests from your frontend
 }));
 
 // BookStore Model
