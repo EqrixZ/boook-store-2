@@ -33,13 +33,11 @@ const AddBook = () => {
       <input
         type="number"
         placeholder="Book Type ID"
-        value={newBook.BookTypeID}
         onChange={(e) => setNewBook({ ...newBook, BookTypeID: e.target.value })}
       />
       <input
         type="number"
         placeholder="Book Price"
-        value={newBook.BookPrice}
         onChange={(e) => setNewBook({ ...newBook, BookPrice: e.target.value })}
       />
       <input
