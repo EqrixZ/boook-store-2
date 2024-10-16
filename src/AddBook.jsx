@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import axios from 'axios';
 
 const AddBook = () => {
-  const [newBook, setNewBook] = useState({ BookName: '', BookTypeID: '', BookPrice: '', Description: '' });
+  const [newBook, setNewBook] = useState({ BookName: '', BookTypeID: 0, BookPrice: 0, Description: '' });
 
   const addBook = async () => {
     // Basic validation
@@ -14,7 +14,7 @@ const AddBook = () => {
     try {
       const response = await axios.post('https://env-5322576.proen.app.ruk-com.cloud/books', newBook);
       alert('Book added successfully!');
-      setNewBook({ BookName: '', BookTypeID: '', BookPrice: '', Description: '' }); // Reset form
+      setNewBook({ BookName: '', BookTypeID: 0, BookPrice: 0, Description: '' }); // Reset form
     } catch (error) {
       console.error('Error adding book:', error);
       alert('Error adding book: ' + error.response?.data?.error || error.message); // Show error message
@@ -31,7 +31,7 @@ const AddBook = () => {
         onChange={(e) => setNewBook({ ...newBook, BookName: e.target.value })}
       />
       <input
-        type="text"
+        type="number"
         placeholder="Book Type ID"
         value={newBook.BookTypeID}
         onChange={(e) => setNewBook({ ...newBook, BookTypeID: e.target.value })}
