@@ -12,7 +12,7 @@ const SellBook = () => {
 
   const fetchBooks = async () => {
     try {
-      const response = await axios.get('https://env-5322576.proen.app.ruk-com.cloud//books');
+      const response = await axios.get('https://env-5322576.proen.app.ruk-com.cloud/books');
       setBooks(response.data);
     } catch (error) {
       console.error('Error fetching books:', error);
