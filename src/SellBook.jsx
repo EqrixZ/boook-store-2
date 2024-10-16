@@ -12,7 +12,7 @@ const SellBook = () => {
 
   const fetchBooks = async () => {
     try {
-      const response = await axios.get('https://env-5322576.proen.app.ruk-com.cloud/books');
+      const response = await axios.get('env-5322576.proen.app.ruk-com.cloud/books');
       setBooks(response.data);
     } catch (error) {
       console.error('Error fetching books:', error);
@@ -21,7 +21,7 @@ const SellBook = () => {
 
   const sellBook = async () => {
     try {
-      await axios.delete(`https://env-5322576.proen.app.ruk-com.cloud/0/books/${selectedBookID}`);
+      await axios.delete(`env-5322576.proen.app.ruk-com.cloud/0/books/${selectedBookID}`);
       alert('Book sold successfully!');
       fetchBooks(); // Refresh the list
     } catch (error) {
