@@ -12,7 +12,7 @@ const AddBook = () => {
     }
 
     try {
-      const response = await axios.post('env-5322576.proen.app.ruk-com.cloud/books', newBook);
+      const response = await axios.post('https://env-5322576.proen.app.ruk-com.cloud/books', newBook);
       alert('Book added successfully!');
       setNewBook({ BookName: '', BookTypeID: 0, BookPrice: 0, Description: '' }); // Reset form
     } catch (error) {
